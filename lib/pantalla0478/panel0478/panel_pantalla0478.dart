@@ -30,61 +30,60 @@ class PanelPantalla0478 extends StatelessWidget {
           style: TextStyle(color: Color(0xfff8f6f0)),
         ),
       ),
-      body: Column(
-        children: <Widget>[
-          Container(
-            margin: const EdgeInsets.all(15),
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                color: Color(0xffbae5ff),
-                boxShadow: [
-                  BoxShadow(
-                      offset: Offset(0, 5),
-                      color: Theme.of(context)
-                          .colorScheme
-                          .primary
-                          .withOpacity(0.1),
-                      spreadRadius: 5,
-                      blurRadius: 5),
-                ]),
-            child: const TextField(
-              decoration: InputDecoration(
-                hintText: "Bienvenidos",
-                hintStyle: TextStyle(
-                    fontWeight: FontWeight.w300, color: Color(0xff0f0f0f)),
-                border: InputBorder.none,
-                prefixIcon: Icon(
-                  Icons.search,
-                  color: Color(0xff3992e3),
+      body: Center(
+        child: Column(
+          children: [
+            Text(
+              'Jaqueline Galindo Aterrizando',
+              style: TextStyle(
+                fontSize: 38,
+                color: Color(0xff04899a),
+              ),
+            ),
+            Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                margin: EdgeInsets.only(top: 20),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Color(0xff4db0ff),
+                    width: 10,
+                  ),
+                ),
+                width: 280,
+                height: 280,
+                alignment: Alignment.center,
+                child: Text(
+                  'JG',
+                  style: TextStyle(
+                    fontSize: 180,
+                    color: Color(0xfffd9ee8),
+                  ),
                 ),
               ),
             ),
-          ),
-          Container(
-            height: 180,
-            margin: const EdgeInsets.all(15),
-            decoration: BoxDecoration(
-                //borderRadius: BorderRa.circular()10
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: NetworkImage(
-                        "https://raw.githubusercontent.com/JaquelineGalindoHuitron/Img_FlutterFlow__IOS_6J/main/UII%20Act1%20Dise%C3%B1o%201%20Flutlab%20App%20Container%20Boxdecoration/img1.jpg"))),
-          ),
-          ListTile(
-            title: Text("Top Servicios"),
-            titleTextStyle: Theme.of(context).textTheme.titleLarge,
-            trailing: Icon(Icons.filter_list_outlined),
-          ),
-          Expanded(
-              child: GridView.count(
-            padding: EdgeInsets.all(15),
-            crossAxisCount: 2,
-            mainAxisSpacing: 20,
-            crossAxisSpacing: 15,
-            children: [for (int i = 1; i <= 10; i++) const Itemservicios()],
-          )),
-        ],
+            Text(
+              'Mat. 21308051280478',
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+
+            /*Container(
+              color: Color(0xff9782f2),
+              width: 300,
+              height: 200,
+              padding: EdgeInsets.all(32),
+              margin: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+              alignment: Alignment.center,
+              child: Text(
+                'Pantalla1 Fuentes0465',
+                style: TextStyle(fontSize: 30),
+              ),
+            )*/
+          ],
+        ),
       ),
     );
   }
